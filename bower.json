@@ -1,0 +1,16 @@
+{
+  "name": "curso_php",
+  "version": "0.0.0",
+  "authors": [
+    "Eduardo Abreu <eduardo@gridweb.com.br>"
+  ],
+  "description": "Primeiro projeto do curso de PHP",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
