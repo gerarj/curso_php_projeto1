@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Site Template</title>
+    <title>Site XY</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -54,6 +54,10 @@
       {
         require_once($dir_file);
       }else{
+
+        //Set Response Code
+        http_response_code(404);
+        
         //Include a 404 ERROR Page
         require_once($template_directory . 'error404.php');
       }

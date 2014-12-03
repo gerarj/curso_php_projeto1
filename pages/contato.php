@@ -21,7 +21,7 @@
 		<div class="row form-group">
 			<div class="col-md-12">
 				<label for="">Assunto</label>
-				<select name="data[assunto]" id="" class="form-control">
+				<select name="data[assunto]" required id="" class="form-control">
 					<option value="">Selecione</option>
 					<option value="Dúvidas">Dúvidas</option>
 					<option value="Reclamações">Reclamações</option>
@@ -32,7 +32,7 @@
 		</div>
 		<div class="row form-group">
 			<div class="col-md-12">
-				<label for="">E-mail</label>
+				<label for="">Mensagem</label>
 				<textarea required max-length="500" onfocusout="jQuery('#countWords').text(jQuery(this).val().length);" onkeypress="jQuery('#countWords').text(jQuery(this).val().length);"  name="data[mensagem]" placeholder="Digite sua mensagem" class="form-control"></textarea>
 				Máximo de 500 caracteres. Digitados: <b id="countWords">0</b>
 			</div>
