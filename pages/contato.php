@@ -2,7 +2,7 @@
 <h1>Fale Conosco</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-<form action="?page=submit_contato" method="POST">
+<form action="submit_contato" method="POST">
 <div class="panel panel-default">
 	<div class="panel-heading">Formulário de Contato</div>
 	<div class="panel-body">

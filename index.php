@@ -1,3 +1,19 @@
+<?php 
+
+function pr($var)
+{
+  echo '<pre>';
+  print_r($var);
+  echo '</prev>';
+}
+
+/*
+* Load Configs file and functions
+ */
+require_once('config/config.php');
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,24 +60,11 @@
     <div class="container">
     
     <?php 
-      /**
-       * Include a page template
-       */
-      $page_template = (isset($_GET['page']))? $_GET['page'] : 'home';
-      $template_directory = __DIR__ . DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR;
-      $dir_file = $template_directory . $page_template . '.php';
-      if(file_exists($dir_file))
-      {
-        require_once($dir_file);
-      }else{
 
-        //Set Response Code
-        http_response_code(404);
-        
-        //Include a 404 ERROR Page
-        require_once($template_directory . 'error404.php');
-      }
-
+      //get route
+      $route = getRoute();
+      //fetch content
+      fetchContent($route);
 
     ?>
   
