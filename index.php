@@ -61,10 +61,8 @@ require_once('config/config.php');
     
     <?php 
 
-      //get route
-      $route = getRoute();
       //fetch content
-      fetchContent($route);
+      fetchContent();
 
     ?>
   

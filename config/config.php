@@ -65,16 +65,23 @@ function getRouteFile($routes)
 }
 
 
-//Get template Directory
+/**
+ * Retorna directorio das pages
+ * @return [string] diretorio das páginas
+ */
 function getTemplateDir()
 {
 
 	return ROOT . DS;
 }
 
-//Fetch page content
-function fetchContent($route)
+
+//Inclui page
+function fetchContent()
 {
+	//get route
+    $route = getRoute();
+
 	$templateDir = getTemplateDir();
      if($route)
       {
