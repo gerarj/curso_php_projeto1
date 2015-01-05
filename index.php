@@ -10,7 +10,7 @@ function pr($var)
 /*
 * Load Configs file and functions
  */
-require_once('config/config.php');
+require_once('config/bootstrap.php');
 
 
 ?>
