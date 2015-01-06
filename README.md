@@ -5,7 +5,7 @@ Entrega do PROJETO 03 do Curso de PHP - Trilhando Caminhos com PHP
 
 Geraldo Neves
 
-- Fixtures
+#Fixtures
 Para adicionar conteudo de teste execute os seguintes comandos
 
 * Entre na pasta principal do projeto
