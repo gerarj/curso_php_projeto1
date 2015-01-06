@@ -10,8 +10,7 @@ define('APP_DIR',basename(dirname(__DIR__)));
 //Inclui arquivo com constantes do Banco
 require_once('database.php');
 
-//Fixtures de Teste
-require_once('fixtures.php');
+require_once('functions.php');
 
 
 //Get Route

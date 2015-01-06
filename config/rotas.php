@@ -1,5 +1,6 @@
 <?php
 return [
 		'contato' => 'pages/contato.php',
-		'submit_contato'=>'pages/submit_contato.php'
+		'submit_contato'=>'pages/submit_contato.php',
+		'busca'=>'pages/busca.php'
 ];

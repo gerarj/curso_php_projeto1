@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="?page=home">Site XY</a>
+          <a class="navbar-brand" href="home">Site XY</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -17,6 +17,13 @@
             <li><a href="servicos">Serviços</a></li>
             <li><a href="contato">Contato</a></li>
           </ul>
+<form class="navbar-form navbar-left" action="busca" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control"  name="q" placeholder="Busca">
+        </div>
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>          
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>

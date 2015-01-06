@@ -52,3 +52,11 @@ insert('paginas',array(
 	'rota'=>'servicos'
 	));
 
+insert('paginas',array(
+	'titulo'=>'Teste',
+	'conteudo'=>'<br>
+<h1>Testes</h1>
+',
+	'rota'=>'testes'
+	));
+
