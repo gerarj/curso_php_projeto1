@@ -21,28 +21,38 @@ function getRoute()
 
 	$routes = array();
 	$indexROOT = false;
-	foreach($path_ar as $index => $path)
+
+	$usingCliServer = (php_sapi_name() == 'cli-server')? true : false;
+
+	if($usingCliServer)
 	{
-		if($path == APP_DIR)
-		{
-			$indexROOT = $index;
-		}
+		$routes[] = $path_ar[1];
+		
+	}else{
 
-		if($indexROOT != false)
+		foreach($path_ar as $index => $path)
 		{
-			if(($index > $indexROOT) && $path !="" )
+			if($path == APP_DIR)
 			{
-				$routes[] = $path;
+				$indexROOT = $index;
 			}
-		}
 
+			if($indexROOT != false)
+			{
+				if(($index > $indexROOT) && $path !="" )
+				{
+					$routes[] = $path;
+				}
+			}
+
+		}
 	}
+
 	//If empty default is home
 	if(empty($routes))
 	{
 		$routes[]  = 'home';
 	}
-
 	$route = getRouteContent($routes);
 	if(!$route)
 	{

@@ -7,7 +7,7 @@ define('DATABASE_HOST','localhost');
 
 define('DATABASE_USER','root');
 
-define('DATABASE_PASS','__YOUR_PASSWORD__');
+define('DATABASE_PASS','semsenha');
 
 define('DATABASE_NAME','cursophp');
 
