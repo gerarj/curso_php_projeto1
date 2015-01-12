@@ -62,9 +62,21 @@ function getRoute()
 	}
 }
 
+
+
 //Get file path from route
 function getRouteFile($routes)
 {
+	//Verifica se a rota pertence a área restrita
+	if(check_auth_route($routes[0]))
+	{
+		//verifica se usuário está logado
+		if(!isLogged())
+		{
+			redirect('/login');
+		}
+	}
+
 	$routeFile = $routes[0];
 	$routeQS = array(); 
 	if(count($routes) > 1)

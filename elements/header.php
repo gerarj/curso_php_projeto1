@@ -16,6 +16,7 @@
             <li><a href="produtos">Produtos</a></li>
             <li><a href="servicos">Serviços</a></li>
             <li><a href="contato">Contato</a></li>
+            <li><a href="login">Login</a></li>            
           </ul>
 <form class="navbar-form navbar-left" action="busca" role="search">
         <div class="form-group">

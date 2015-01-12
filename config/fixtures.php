@@ -60,3 +60,14 @@ insert('paginas',array(
 	'rota'=>'testes'
 	));
 
+
+//Insere usuarios
+insertUser(array(
+	'login'=>'admin',
+	'senha'=>md5('123')
+	));
+
+insertUser(array(
+	'login'=>'geraldo',
+	'senha'=>md5('1234')
+	));

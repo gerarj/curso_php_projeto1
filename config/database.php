@@ -39,6 +39,7 @@ function deleteTable()
 	try {
 
 		$con->query('DROP TABLE paginas');	
+		$con->query('DROP TABLE usuarios');	
 
 	} catch (Exception $e) {
 
@@ -50,15 +51,23 @@ function deleteTable()
 function createTable()
 {
 	$con = connect();
+
+	try {
 	$stm = $con->prepare('CREATE TABLE paginas (
 			id INT (11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			titulo VARCHAR (150) NOT NULL,
 			conteudo TEXT NOT NULL,
 			rota VARCHAR (150)
 		) ');
+	$stm->execute();
 
-	try {
-		$stm->execute();
+	$stm = $con->prepare('CREATE TABLE usuarios (
+			id INT (11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			login VARCHAR (60) NOT NULL,
+			senha VARCHAR (250) NOT NULL
+		) ');
+
+	$stm->execute();
 		
 	} catch (Exception $e) {
 
@@ -95,3 +104,23 @@ function insert($table, $fields = array())
 
 }
 
+function insertUser($values = array())
+{
+
+	$con = connect();
+
+	try {
+		$stm = $con->prepare("INSERT INTO usuarios (login, senha) VALUES (:login,:senha)");
+		foreach ($values as $key => $value) {
+
+			$stm->bindValue(':'.$key, $value);
+
+		}
+		$stm->execute();
+		return true;
+
+	} catch (Exception $e) {
+		echo $e->getMessage();
+	}
+
+}
