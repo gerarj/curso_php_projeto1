@@ -46,7 +46,7 @@ function _authenticate($user,$pass)
 	$con = connect();
 
 	//hash da senha
-	$pass = md5($pass);
+	$pass = password_hash($pass,PASSWORD_DEFAULT);
 
 	$stm = $con->prepare('SELECT * FROM usuarios WHERE login=:login AND senha=:senha');
 

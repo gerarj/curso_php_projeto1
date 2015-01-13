@@ -64,10 +64,10 @@ insert('paginas',array(
 //Insere usuarios
 insertUser(array(
 	'login'=>'admin',
-	'senha'=>md5('123')
+	'senha'=>password_hash('123',PASSWORD_DEFAULT)
 	));
 
 insertUser(array(
 	'login'=>'geraldo',
-	'senha'=>md5('1234')
+	'senha'=>password_hash('1234',PASSWORD_DEFAULT)
 	));
